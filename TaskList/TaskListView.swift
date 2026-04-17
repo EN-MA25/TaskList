@@ -38,3 +38,7 @@ struct TaskListView: View {
         }
     }
 }
+
+#Preview {
+    TaskListView(viewModel: TaskViewModel())
+}
