@@ -28,11 +28,11 @@ struct TaskListView: View {
 
     var body: some View {
         List {
-            ForEach(viewModel.tasks) { task in
+            ForEach($viewModel.tasks) { $task in
                 HStack {
                     Text(task.title)
                     Spacer()
-                    Toggle("", isOn: task.isDone)
+                    Toggle("", isOn: $task.isDone)
                 }
             }
         }
