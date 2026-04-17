@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    private var viewModel = TaskViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            NavigationLink("Go to TaskListView") {
+                TaskListView(viewModel: viewModel)
+            }
         }
-        .padding()
     }
 }
 
